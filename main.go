@@ -93,7 +93,7 @@ func decode(buf []byte) {
 		buf = buf[2:]
 	}
 	if flag & flagDataGas != 0 && len(buf) >= 4 {
-		printf("Gas:         %d ohm\n", int(buf[0]) << 24 | int(buf[1]) << 16 | int(buf[2]) << 8 | int(buf[0]))
+		printf("Gas:         %d ohm\n", int(buf[0]) << 24 | int(buf[1]) << 16 | int(buf[2]) << 8 | int(buf[3]))
 		buf = buf[4:]
 	}
 	if flag & flagDataAltitude != 0 && len(buf) >= 2 {
